@@ -1,0 +1,95 @@
+=== Run information ===
+
+Relation:    data/mushroom
+Instances:   8124
+Attributes:  23
+             cap-shape
+             cap-surface
+             cap-color
+             bruises
+             odor
+             gill-attachment
+             gill-spacing
+             gill-size
+             gill-color
+             stalk-shape
+             stalk-root
+             stalk-surface-above-ring
+             stalk-surface-below-ring
+             stalk-color-above-ring
+             stalk-color-below-ring
+             veil-type
+             veil-color
+             ring-number
+             ring-type
+             spore-print-color
+             population
+             habitat
+             class
+Test mode:split 66.00% train, reminder test
+
+=== Classifier model (full training set) ===
+
+ID3 tree
+
+
+odor = m: 1
+odor = n
+|   spore-print-color = n: 0
+|   spore-print-color = r: 1
+|   spore-print-color = w
+|   |   habitat = m: 0
+|   |   habitat = p: 0
+|   |   habitat = w: 0
+|   |   habitat = u: 0
+|   |   habitat = g: 0
+|   |   habitat = l
+|   |   |   cap-color = n: 0
+|   |   |   cap-color = p: 0
+|   |   |   cap-color = r: 0
+|   |   |   cap-color = w: 1
+|   |   |   cap-color = c: 0
+|   |   |   cap-color = y: 1
+|   |   |   cap-color = u: 0
+|   |   |   cap-color = g: 0
+|   |   |   cap-color = e: 0
+|   |   |   cap-color = b: 0
+|   |   habitat = d
+|   |   |   gill-size = n: 1
+|   |   |   gill-size = b: 0
+|   spore-print-color = u: 0
+|   spore-print-color = y: 0
+|   spore-print-color = h: 0
+|   spore-print-color = k: 0
+|   spore-print-color = o: 0
+|   spore-print-color = b: 0
+odor = p: 1
+odor = c: 1
+odor = a: 0
+odor = y: 1
+odor = f: 1
+odor = l: 0
+odor = s: 1
+Time taken to build model: 0.13
+
+=== Evaluation on test split ===
+=== Summary ===
+
+Correctly Classified Instances            2762         100.0000 %
+Incorrectly Classified Instances             0         0.0000 %
+Kappa statistic                          1.0000
+Total numbers of Instances                2762
+
+=== Detailed Accuracy By Class ===
+
+                TP Rate  FP Rate  Precision  Recall  F-Measure  MCC    Class
+                1.000    0.000    1.000      1.000   1.000      1.000  e
+                1.000    0.000    1.000      1.000   1.000      1.000  p
+Weigted Avg.    1.000    0.000    1.000      1.000   1.000      1.000
+
+
+=== Confusion Matrix ===
+      a       b   <-- classified as
+   1466       0 |  a = e
+      0    1296 |  b = p
+

@@ -1,0 +1,82 @@
+=== Run information ===
+
+Relation:    data/zoo
+Instances:   101
+Attributes:  17
+             hair
+             feathers
+             eggs
+             milk
+             airbone
+             aquatic
+             predator
+             toothed
+             backbone
+             breathes
+             venomous
+             fin
+             legs
+             tail
+             domestic
+             catsize
+             class
+Test mode:split 66.00% train, reminder test
+
+=== Classifier model (full training set) ===
+
+ID3 tree
+
+
+legs = 5: 6
+legs = 6
+|   aquatic = 0: 5
+|   aquatic = 1: 6
+legs = 2
+|   hair = 0: 1
+|   hair = 1: 0
+legs = 4
+|   hair = 0
+|   |   toothed = 0: 6
+|   |   toothed = 1: 4
+|   hair = 1: 0
+legs = 0
+|   eggs = 0
+|   |   milk = 0: 2
+|   |   milk = 1: 0
+|   eggs = 1
+|   |   toothed = 0: 6
+|   |   toothed = 1: 3
+legs = 8: 6
+Time taken to build model: 0.00
+
+=== Evaluation on test split ===
+=== Summary ===
+
+Correctly Classified Instances              30         88.2353 %
+Incorrectly Classified Instances             4         11.7647 %
+Kappa statistic                          0.8517
+Total numbers of Instances                  34
+
+=== Detailed Accuracy By Class ===
+
+                TP Rate  FP Rate  Precision  Recall  F-Measure  MCC    Class
+                1.000    0.000    1.000      1.000   1.000      1.000  1
+                1.000    0.000    1.000      1.000   1.000      1.000  2
+                0.000    0.000    0.000      0.000   0.000      0.000  3
+                1.000    0.062    0.500      1.000   0.667      0.685  4
+                1.000    0.030    0.500      1.000   0.667      0.696  5
+                1.000    0.000    1.000      1.000   1.000      1.000  6
+                1.000    0.033    0.800      1.000   0.889      0.879  7
+Weigted Avg.    0.882    0.008    0.815      0.882   0.840      0.841
+
+
+=== Confusion Matrix ===
+      a       b       c       d       e       f       g   <-- classified as
+     12       0       0       0       0       0       0 |  a = 1
+      0       7       0       0       0       0       0 |  b = 2
+      0       0       0       2       1       0       1 |  c = 3
+      0       0       0       2       0       0       0 |  d = 4
+      0       0       0       0       1       0       0 |  e = 5
+      0       0       0       0       0       4       0 |  f = 6
+      0       0       0       0       0       0       4 |  g = 7
+
